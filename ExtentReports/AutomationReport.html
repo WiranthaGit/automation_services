@@ -1,0 +1,697 @@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<title>Automation Test Suite Report - ALL</title>
+<link rel="apple-touch-icon" href="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@b00a2d0486596e73dd7326beacf352c639623a0e/commons/img/logo.png">
+<link rel="shortcut icon" href="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@b00a2d0486596e73dd7326beacf352c639623a0e/commons/img/logo.png">
+<link href="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@ce8b10435bcbae260c334c0d0c6b61d2c19b6168/spark/css/spark-style.css" rel="stylesheet" />
+<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@7cc78ce/spark/js/jsontree.js"></script>
+<style type="text/css"></style></head><body class="spa -report dark">
+  <div class="app">
+    <div class="layout">
+<div class="header navbar">
+<div class="vheader">
+<div class="nav-logo">
+<a href="#">
+<div class="logo" style="background-image: url('https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@b00a2d0486596e73dd7326beacf352c639623a0e/commons/img/logo.png')"></div>
+</a>
+</div>
+<ul class="nav-left">
+<li class="search-box">
+<a class="search-toggle" href="#">
+<i class="search-icon fa fa-search"></i>
+<i class="search-icon-close fa fa-close"></i>
+</a>
+</li>
+<li class="search-input"><input id="search-tests" class="form-control" type="text" placeholder="Search..."></li>
+</ul>
+<ul class="nav-right">
+<li class="m-r-10">
+<a href="#"><span class="badge badge-primary">Automation Test Suite Report - ALL</span></a>
+</li>
+<li class="m-r-10">
+<a href="#"><span class="badge badge-primary">Aug 18, 2025 02:28:02 PM</span></a>
+</li>
+</ul>
+</div>
+</div><div class="side-nav">
+<div class="side-nav-inner">
+<ul class="side-nav-menu">
+<li class="nav-item dropdown" onclick="toggleView('dashboard-view')">
+<a id="nav-dashboard" class="dropdown-toggle" href="#">
+<span class="ico"><i class="fa fa-bar-chart"></i></span>
+</a>
+</li>
+<li class="nav-item dropdown" onclick="toggleView('test-view')">
+<a id="nav-test" class="dropdown-toggle" href="#">
+<span class="ico"><i class="fa fa-list"></i></span>
+</a>
+</li>
+<li class="nav-item dropdown" onclick="toggleView('category-view')">
+<a id="nav-category" class="dropdown-toggle" href="#">
+<span class="ico"><i class="fa fa-tag"></i></span>
+</a>
+</li>
+<li class="nav-item dropdown" onclick="toggleView('exception-view')">
+<a id="nav-exception" class="dropdown-toggle" href="#">
+<span class="ico"><i class="fa fa-bug"></i></span>
+</a>
+</li>
+</ul>
+</div>
+</div>      <div class="vcontainer">
+        <div class="main-content">
+<div class="container-fluid p-4 view dashboard-view">
+<div class="row">
+<div class="col-md-3">
+<div class="card"><div class="card-body">
+<p class="m-b-0">Started</p>
+<h3>Aug 18, 2025 02:28:02 PM</h3>
+</div></div>
+</div>
+<div class="col-md-3">
+<div class="card"><div class="card-body">
+<p class="m-b-0">Ended</p>
+<h3>Aug 18, 2025 02:28:04 PM</h3>
+</div></div>
+</div>
+<div class="col-md-3">
+<div class="card"><div class="card-body">
+<p class="m-b-0 text-pass">Class Passed</p>
+<h3>0</h3>
+</div></div>
+</div>
+<div class="col-md-3">
+<div class="card"><div class="card-body">
+<p class="m-b-0 text-fail">Class Failed</p>
+<h3>1</h3>
+</div></div>
+</div>
+</div>
+<div class="row">
+<div class="col-md-6">
+<div class="card">
+<div class="card-header">
+<h6 class="card-title">Class</h6>
+</div>
+<div class="card-body">
+<div class="">
+<canvas id='parent-analysis' width='115' height='90'></canvas>
+</div>
+</div>
+<div class="card-footer">
+<div><small data-tooltip='0%'>
+<b>0</b> class passed
+</small>
+</div>
+<div>
+<small data-tooltip='100%'><b>1</b> class failed,
+<b>0</b> skipped, <b data-tooltip='0%'>0</b> others
+</small>
+</div>
+</div>
+</div>
+</div>
+<div class="col-md-6">
+<div class="card">
+<div class="card-header">
+<h6 class="card-title">Log events</h6>
+</div>
+<div class="card-body">
+<div class="">
+<canvas id='events-analysis' width='115' height='90'></canvas>
+</div>
+</div>
+<div class="card-footer">
+<div><small data-tooltip='0%'><b>0</b> events passed</small></div>
+<div>
+<small data-tooltip='36%'><b>4</b> events failed,
+<b data-tooltip='%'>7</b> others
+</small>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="row"><div class="col-md-12">
+<div class="card"><div class="card-header"><p>Timeline</p></div>
+<div class="card-body pt-0"><div>
+<canvas id="timeline" height="120"></canvas>
+</div></div>
+</div>
+</div></div>
+<script>
+var timeline = {
+"verifyGetUsers":2.058
+};
+</script>
+<div class="row">
+<div class="col-lg-6 col-md-12 category-container">
+<div class="card">
+<div class="card-header"><p>Tags</p></div>
+<div class="card-body pb-0 pt-0"><table class="table table-sm table-bordered">
+<thead><tr class="bg-gray"><th>Name</th><th>Passed</th><th>Failed</th><th>Skipped</th><th>Others</th><th>Passed %</th></tr></thead><tbody>
+<tr>
+<td>REGRESSION</td>
+<td>0</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>0%</td>
+</tr>
+<tr>
+<td>BVT</td>
+<td>0</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>0%</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<div class="col-lg-6 col-md-12 sysenv-container">
+<div class="card">
+<div class="card-header"><p>System/Environment</p></div>
+<div class="card-body pb-0 pt-0"><table class="table table-sm table-bordered">
+<thead><tr class="bg-gray"><th>Name</th><th>Value</th></tr></thead>
+<tbody>
+<tr>
+<td>Organization</td>
+<td>Cloud Solutions International</td>
+</tr>
+<tr>
+<td>Employee</td>
+<td><b> Wirantha Geeshan </b> Execute</td>
+</tr>
+<tr>
+<td>Domain</td>
+<td>QA <i class='fa fa-laptop' style='font-size:18px'></i></td>
+</tr>
+<tr>
+<td>OS</td>
+<td>Windows 11</td>
+</tr>
+<tr>
+<td>OS Version</td>
+<td>10.0</td>
+</tr>
+<tr>
+<td>Browser</td>
+<td>Chrome</td>
+</tr>
+<tr>
+<td>MAC Address</td>
+<td>28-6B-35-02-E3-F1</td>
+</tr>
+<tr>
+<td>IP Address</td>
+<td>172.31.11.195</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+</div>
+</div>
+<script>
+var statusGroup = {
+parentCount: 5,
+passParent: 0,
+failParent: 1,
+warningParent: 0,
+skipParent: 0,
+childCount: 5,
+passChild: 0,
+failChild: 0,
+warningChild: 0,
+skipChild: 0,
+infoChild: 0,
+grandChildCount: 5,
+passGrandChild: 0,
+failGrandChild: 0,
+warningGrandChild: 0,
+skipGrandChild: 0,
+infoGrandChild: 0,
+eventsCount: 5,
+passEvents: 0,
+failEvents: 4,
+warningEvents: 0,
+skipEvents: 0,
+infoEvents: 7
+};
+</script><div class="test-wrapper row view test-view">
+  <div class="test-list">
+    <div class="test-list-tools">
+<ul class="tools pull-left">
+<li><a href="#"><span class="font-size-14">Tests</span></a></li>
+</ul>
+<ul class="tools text-right">
+<li class="dropdown">
+<a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-exclamation-circle"></i></a>
+<ul id="status-toggle" class="dropdown-menu dropdown-md p-v-0">
+<a class="dropdown-item" status="fail" href="#"><span>Fail</span><span class="status danger"></span></a>
+<div class="dropdown-divider"></div>
+<a status="clear" class="dropdown-item" href="#"><span>Clear</span><span class="pull-right"><i class="fa fa-close"></i></span></a>
+</ul>
+</li>
+<li class="dropdown">
+<a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-tag"></i></a>
+<ul id="tag-toggle" class="dropdown-menu dropdown-md p-v-0">
+<a class="dropdown-item" href="#">REGRESSION</a><a class="dropdown-item" href="#">BVT</a>
+</ul>
+</li>
+</ul>
+</div>    <div class="test-list-wrapper scrollable">
+      <ul class="test-list-item">
+        <li class="test-item"  status="fail" test-id="1"
+          author=""
+          tag="BVT REGRESSION"
+          device="">
+          <div class="test-detail">
+            <p class="name">verifyGetUsers</p>
+            <p class="text-sm">
+              <span>2:28:02 PM</span> / <span>00:00:02:058</span>
+              <span class="badge fail-bg log float-right">Fail</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-fail">verifyGetUsers</h5>
+<span class='badge badge-success'>08.18.2025 2:28:02 PM</span>
+<span class='badge badge-danger'>08.18.2025 2:28:04 PM</span>
+<span class='badge badge-default'>00:00:02:058</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=1</span>
+<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+</div>
+<div class="m-t-15"><span class="badge badge-pill badge-default">BVT</span>
+<span class="badge badge-pill badge-default">REGRESSION</span></div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>2:28:02 PM</td>
+        <td>
+          Endpoint is https://api.example.com/v1/users
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>2:28:02 PM</td>
+        <td>
+          baseURI is set to https://api.example.com/v1
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>2:28:02 PM</td>
+        <td>
+          basePath is set to /users
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>2:28:02 PM</td>
+        <td>
+          Headers are 
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>2:28:02 PM</td>
+        <td>
+          <table class='markup-table table '><tr><td>Content-Type</td><td>application/json</td></tr></table>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>2:28:02 PM</td>
+        <td>
+          Request body is 
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>2:28:02 PM</td>
+        <td>
+           <div class='json-tree' id='code-block-json-0'></div>
+ <script>
+  function jsonTreeCreate0() { 
+   document.getElementById('code-block-json-0').innerHTML = JSONTree.create(); 
+  }
+  jsonTreeCreate0();
+ </script>
+
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>2:28:04 PM</td>
+        <td>
+          <i class='fa fa-bug' ></i>  <b><i>java.net.UnknownHostException: No such host is known (api.example.com)</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>2:28:04 PM</td>
+        <td>
+          <details><summary><b><font color=red> Exception occurred, click to see details: <i class='fa fa-frown-o' style='font-size:24px'></i> </font></b></summary>[java.base/java.net.Inet6AddressImpl.lookupAllHostAddr(Native Method)<br> java.base/java.net.Inet6AddressImpl.lookupAllHostAddr(Inet6AddressImpl.java:52)<br> java.base/java.net.InetAddress$PlatformResolver.lookupByName(InetAddress.java:1211)<br> java.base/java.net.InetAddress.getAddressesFromNameService(InetAddress.java:1828)<br> java.base/java.net.InetAddress$NameServiceAddresses.get(InetAddress.java:1139)<br> java.base/java.net.InetAddress.getAllByName0(InetAddress.java:1818)<br> java.base/java.net.InetAddress.getAllByName(InetAddress.java:1688)<br> org.apache.http.impl.conn.SystemDefaultDnsResolver.resolve(SystemDefaultDnsResolver.java:45)<br> org.apache.http.impl.conn.DefaultClientConnectionOperator.resolveHostname(DefaultClientConnectionOperator.java:263)<br> org.apache.http.impl.conn.DefaultClientConnectionOperator.openConnection(DefaultClientConnectionOperator.java:162)<br> org.apache.http.impl.conn.ManagedClientConnectionImpl.open(ManagedClientConnectionImpl.java:326)<br> org.apache.http.impl.client.DefaultRequestDirector.tryConnect(DefaultRequestDirector.java:605)<br> org.apache.http.impl.client.DefaultRequestDirector.execute(DefaultRequestDirector.java:440)<br> org.apache.http.impl.client.AbstractHttpClient.doExecute(AbstractHttpClient.java:835)<br> org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:83)<br> io.restassured.internal.RestAssuredHttpBuilder.doRequest(RestAssuredHttpBuilder.java:141)<br> io.restassured.internal.http.HTTPBuilder.doRequest(HTTPBuilder.java:496)<br> io.restassured.internal.http.HTTPBuilder.request(HTTPBuilder.java:453)<br> io.restassured.internal.http.HTTPBuilder$request$2.call(Unknown Source)<br> org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:45)<br> org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:125)<br> org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:166)<br> io.restassured.internal.RequestSpecificationImpl.sendHttpRequest(RequestSpecificationImpl.groovy:1480)<br> io.restassured.internal.RequestSpecificationImpl.this$2$sendHttpRequest(RequestSpecificationImpl.groovy)<br> java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)<br> java.base/java.lang.reflect.Method.invoke(Method.java:580)<br> org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:343)<br> groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:328)<br> groovy.lang.MetaClassImpl.doInvokeMethod(MetaClassImpl.java:1331)<br> groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1086)<br> groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1006)<br> groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:789)<br> io.restassured.internal.RequestSpecificationImpl.invokeMethod(RequestSpecificationImpl.groovy)<br> org.codehaus.groovy.runtime.callsite.PogoInterceptableSite.call(PogoInterceptableSite.java:46)<br> org.codehaus.groovy.runtime.callsite.PogoInterceptableSite.callCurrent(PogoInterceptableSite.java:57)<br> org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCallCurrent(CallSiteArray.java:49)<br> org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:171)<br> io.restassured.internal.RequestSpecificationImpl.sendRequest(RequestSpecificationImpl.groovy:1229)<br> io.restassured.internal.RequestSpecificationImpl.this$2$sendRequest(RequestSpecificationImpl.groovy)<br> java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)<br> java.base/java.lang.reflect.Method.invoke(Method.java:580)<br> org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:343)<br> groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:328)<br> groovy.lang.MetaClassImpl.doInvokeMethod(MetaClassImpl.java:1331)<br> groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1086)<br> groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1006)<br> groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:789)<br> io.restassured.internal.RequestSpecificationImpl.invokeMethod(RequestSpecificationImpl.groovy)<br> org.codehaus.groovy.runtime.callsite.PogoInterceptableSite.call(PogoInterceptableSite.java:46)<br> org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:45)<br> org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:125)<br> org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:166)<br> io.restassured.internal.filter.SendRequestFilter.filter(SendRequestFilter.groovy:30)<br> io.restassured.filter.Filter$filter.call(Unknown Source)<br> org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:45)<br> io.restassured.filter.Filter$filter$0.call(Unknown Source)<br> io.restassured.internal.filter.FilterContextImpl.next(FilterContextImpl.groovy:72)<br> io.restassured.filter.time.TimingFilter.filter(TimingFilter.java:56)<br> io.restassured.filter.Filter$filter$0.call(Unknown Source)<br> org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:45)<br> io.restassured.filter.Filter$filter.call(Unknown Source)<br> io.restassured.internal.filter.FilterContextImpl.next(FilterContextImpl.groovy:72)<br> io.restassured.filter.FilterContext$next.call(Unknown Source)<br> org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:45)<br> org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:125)<br> org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:148)<br> io.restassured.internal.filter.CsrfFilter.filter(CsrfFilter.groovy:70)<br> io.restassured.filter.Filter$filter.call(Unknown Source)<br> org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:45)<br> org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:125)<br> org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:157)<br> io.restassured.internal.filter.FilterContextImpl.next(FilterContextImpl.groovy:72)<br> io.restassured.filter.FilterContext$next.call(Unknown Source)<br> org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:45)<br> org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:125)<br> org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:148)<br> io.restassured.internal.RequestSpecificationImpl.applyPathParamsAndSendRequest(RequestSpecificationImpl.groovy:1704)<br> io.restassured.internal.RequestSpecificationImpl.this$2$applyPathParamsAndSendRequest(RequestSpecificationImpl.groovy)<br> java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)<br> java.base/java.lang.reflect.Method.invoke(Method.java:580)<br> org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:343)<br> groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:328)<br> groovy.lang.MetaClassImpl.doInvokeMethod(MetaClassImpl.java:1331)<br> groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1086)<br> groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1006)<br> groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:789)<br> io.restassured.internal.RequestSpecificationImpl.invokeMethod(RequestSpecificationImpl.groovy)<br> org.codehaus.groovy.runtime.callsite.PogoInterceptableSite.call(PogoInterceptableSite.java:46)<br> org.codehaus.groovy.runtime.callsite.PogoInterceptableSite.callCurrent(PogoInterceptableSite.java:57)<br> org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCallCurrent(CallSiteArray.java:49)<br> org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:171)<br> org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:203)<br> io.restassured.internal.RequestSpecificationImpl.request(RequestSpecificationImpl.groovy:296)<br> io.restassured.internal.RequestSpecificationImpl.request(RequestSpecificationImpl.groovy)<br> java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)<br> java.base/java.lang.reflect.Method.invoke(Method.java:580)<br> org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:343)<br> groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:328)<br> groovy.lang.MetaClassImpl.doInvokeMethod(MetaClassImpl.java:1331)<br> groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1086)<br> groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1006)<br> groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:789)<br> io.restassured.internal.RequestSpecificationImpl.invokeMethod(RequestSpecificationImpl.groovy)<br> org.codehaus.groovy.runtime.callsite.PogoInterceptableSite.call(PogoInterceptableSite.java:46)<br> org.codehaus.groovy.runtime.callsite.PogoInterceptableSite.callCurrent(PogoInterceptableSite.java:57)<br> org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCallCurrent(CallSiteArray.java:49)<br> org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:171)<br> org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:194)<br> io.restassured.internal.RequestSpecificationImpl.request(RequestSpecificationImpl.groovy:288)<br> io.restassured.internal.RequestSpecificationImpl.request(RequestSpecificationImpl.groovy)<br> java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)<br> java.base/java.lang.reflect.Method.invoke(Method.java:580)<br> org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:343)<br> groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:328)<br> groovy.lang.MetaClassImpl.doInvokeMethod(MetaClassImpl.java:1331)<br> groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1086)<br> groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1006)<br> groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:789)<br> io.restassured.internal.RequestSpecificationImpl.invokeMethod(RequestSpecificationImpl.groovy)<br> org.codehaus.groovy.runtime.callsite.PogoInterceptableSite.call(PogoInterceptableSite.java:46)<br> org.codehaus.groovy.runtime.callsite.PogoInterceptableSite.callCurrent(PogoInterceptableSite.java:57)<br> org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCallCurrent(CallSiteArray.java:49)<br> org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:171)<br> org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:185)<br> io.restassured.internal.RequestSpecificationImpl.request(RequestSpecificationImpl.groovy:284)<br> io.restassured.internal.RequestSpecificationImpl.request(RequestSpecificationImpl.groovy)<br> com.cloud.api.base.APIBaseService.makeRequest(APIBaseService.java:185)<br> com.example.service.ApiService.getUsers(ApiService.java:29)<br> com.example.service.ApiService.getUsers(ApiService.java:24)<br> com.example.userTest.verifyGetUsers(userTest.java:41)<br> java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)<br> java.base/java.lang.reflect.Method.invoke(Method.java:580)<br> org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)<br> org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)<br> org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)<br> org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)<br> org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)<br> org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)<br> org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)<br> org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)<br> java.base/java.util.ArrayList.forEach(ArrayList.java:1596)<br> org.testng.TestRunner.privateRun(TestRunner.java:739)<br> org.testng.TestRunner.run(TestRunner.java:614)<br> org.testng.SuiteRunner.runTest(SuiteRunner.java:421)<br> org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)<br> org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)<br> org.testng.SuiteRunner.run(SuiteRunner.java:312)<br> org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)<br> org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)<br> org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)<br> org.testng.TestNG.runSuitesLocally(TestNG.java:1208)<br> org.testng.TestNG.runSuites(TestNG.java:1112)<br> org.testng.TestNG.run(TestNG.java:1079)<br> com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:65)<br> com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:105)]</details> 
+
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>2:28:04 PM</td>
+        <td>
+          <span class='badge white-text red'><b>verifyGetUsers is failed.</b>  <i class='fa fa-frown-o' style='font-size:24px'></i></span>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>2:28:04 PM</td>
+        <td>
+          <textarea readonly class="code-block">java.net.UnknownHostException: No such host is known (api.example.com)
+	at java.base/java.net.Inet6AddressImpl.lookupAllHostAddr(Native Method)
+	at java.base/java.net.Inet6AddressImpl.lookupAllHostAddr(Inet6AddressImpl.java:52)
+	at java.base/java.net.InetAddress$PlatformResolver.lookupByName(InetAddress.java:1211)
+	at java.base/java.net.InetAddress.getAddressesFromNameService(InetAddress.java:1828)
+	at java.base/java.net.InetAddress$NameServiceAddresses.get(InetAddress.java:1139)
+	at java.base/java.net.InetAddress.getAllByName0(InetAddress.java:1818)
+	at java.base/java.net.InetAddress.getAllByName(InetAddress.java:1688)
+	at org.apache.http.impl.conn.SystemDefaultDnsResolver.resolve(SystemDefaultDnsResolver.java:45)
+	at org.apache.http.impl.conn.DefaultClientConnectionOperator.resolveHostname(DefaultClientConnectionOperator.java:263)
+	at org.apache.http.impl.conn.DefaultClientConnectionOperator.openConnection(DefaultClientConnectionOperator.java:162)
+	at org.apache.http.impl.conn.ManagedClientConnectionImpl.open(ManagedClientConnectionImpl.java:326)
+	at org.apache.http.impl.client.DefaultRequestDirector.tryConnect(DefaultRequestDirector.java:605)
+	at org.apache.http.impl.client.DefaultRequestDirector.execute(DefaultRequestDirector.java:440)
+	at org.apache.http.impl.client.AbstractHttpClient.doExecute(AbstractHttpClient.java:835)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:83)
+	at io.restassured.internal.RestAssuredHttpBuilder.doRequest(RestAssuredHttpBuilder.java:141)
+	at io.restassured.internal.http.HTTPBuilder.doRequest(HTTPBuilder.java:496)
+	at io.restassured.internal.http.HTTPBuilder.request(HTTPBuilder.java:453)
+	at io.restassured.internal.http.HTTPBuilder$request$2.call(Unknown Source)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:45)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:125)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:166)
+	at io.restassured.internal.RequestSpecificationImpl.sendHttpRequest(RequestSpecificationImpl.groovy:1480)
+	at io.restassured.internal.RequestSpecificationImpl.this$2$sendHttpRequest(RequestSpecificationImpl.groovy)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:343)
+	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:328)
+	at groovy.lang.MetaClassImpl.doInvokeMethod(MetaClassImpl.java:1331)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1086)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1006)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:789)
+	at io.restassured.internal.RequestSpecificationImpl.invokeMethod(RequestSpecificationImpl.groovy)
+	at org.codehaus.groovy.runtime.callsite.PogoInterceptableSite.call(PogoInterceptableSite.java:46)
+	at org.codehaus.groovy.runtime.callsite.PogoInterceptableSite.callCurrent(PogoInterceptableSite.java:57)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCallCurrent(CallSiteArray.java:49)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:171)
+	at io.restassured.internal.RequestSpecificationImpl.sendRequest(RequestSpecificationImpl.groovy:1229)
+	at io.restassured.internal.RequestSpecificationImpl.this$2$sendRequest(RequestSpecificationImpl.groovy)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:343)
+	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:328)
+	at groovy.lang.MetaClassImpl.doInvokeMethod(MetaClassImpl.java:1331)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1086)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1006)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:789)
+	at io.restassured.internal.RequestSpecificationImpl.invokeMethod(RequestSpecificationImpl.groovy)
+	at org.codehaus.groovy.runtime.callsite.PogoInterceptableSite.call(PogoInterceptableSite.java:46)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:45)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:125)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:166)
+	at io.restassured.internal.filter.SendRequestFilter.filter(SendRequestFilter.groovy:30)
+	at io.restassured.filter.Filter$filter.call(Unknown Source)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:45)
+	at io.restassured.filter.Filter$filter$0.call(Unknown Source)
+	at io.restassured.internal.filter.FilterContextImpl.next(FilterContextImpl.groovy:72)
+	at io.restassured.filter.time.TimingFilter.filter(TimingFilter.java:56)
+	at io.restassured.filter.Filter$filter$0.call(Unknown Source)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:45)
+	at io.restassured.filter.Filter$filter.call(Unknown Source)
+	at io.restassured.internal.filter.FilterContextImpl.next(FilterContextImpl.groovy:72)
+	at io.restassured.filter.FilterContext$next.call(Unknown Source)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:45)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:125)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:148)
+	at io.restassured.internal.filter.CsrfFilter.filter(CsrfFilter.groovy:70)
+	at io.restassured.filter.Filter$filter.call(Unknown Source)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:45)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:125)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:157)
+	at io.restassured.internal.filter.FilterContextImpl.next(FilterContextImpl.groovy:72)
+	at io.restassured.filter.FilterContext$next.call(Unknown Source)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:45)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:125)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:148)
+	at io.restassured.internal.RequestSpecificationImpl.applyPathParamsAndSendRequest(RequestSpecificationImpl.groovy:1704)
+	at io.restassured.internal.RequestSpecificationImpl.this$2$applyPathParamsAndSendRequest(RequestSpecificationImpl.groovy)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:343)
+	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:328)
+	at groovy.lang.MetaClassImpl.doInvokeMethod(MetaClassImpl.java:1331)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1086)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1006)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:789)
+	at io.restassured.internal.RequestSpecificationImpl.invokeMethod(RequestSpecificationImpl.groovy)
+	at org.codehaus.groovy.runtime.callsite.PogoInterceptableSite.call(PogoInterceptableSite.java:46)
+	at org.codehaus.groovy.runtime.callsite.PogoInterceptableSite.callCurrent(PogoInterceptableSite.java:57)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCallCurrent(CallSiteArray.java:49)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:171)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:203)
+	at io.restassured.internal.RequestSpecificationImpl.request(RequestSpecificationImpl.groovy:296)
+	at io.restassured.internal.RequestSpecificationImpl.request(RequestSpecificationImpl.groovy)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:343)
+	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:328)
+	at groovy.lang.MetaClassImpl.doInvokeMethod(MetaClassImpl.java:1331)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1086)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1006)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:789)
+	at io.restassured.internal.RequestSpecificationImpl.invokeMethod(RequestSpecificationImpl.groovy)
+	at org.codehaus.groovy.runtime.callsite.PogoInterceptableSite.call(PogoInterceptableSite.java:46)
+	at org.codehaus.groovy.runtime.callsite.PogoInterceptableSite.callCurrent(PogoInterceptableSite.java:57)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCallCurrent(CallSiteArray.java:49)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:171)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:194)
+	at io.restassured.internal.RequestSpecificationImpl.request(RequestSpecificationImpl.groovy:288)
+	at io.restassured.internal.RequestSpecificationImpl.request(RequestSpecificationImpl.groovy)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:343)
+	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:328)
+	at groovy.lang.MetaClassImpl.doInvokeMethod(MetaClassImpl.java:1331)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1086)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1006)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:789)
+	at io.restassured.internal.RequestSpecificationImpl.invokeMethod(RequestSpecificationImpl.groovy)
+	at org.codehaus.groovy.runtime.callsite.PogoInterceptableSite.call(PogoInterceptableSite.java:46)
+	at org.codehaus.groovy.runtime.callsite.PogoInterceptableSite.callCurrent(PogoInterceptableSite.java:57)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCallCurrent(CallSiteArray.java:49)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:171)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:185)
+	at io.restassured.internal.RequestSpecificationImpl.request(RequestSpecificationImpl.groovy:284)
+	at io.restassured.internal.RequestSpecificationImpl.request(RequestSpecificationImpl.groovy)
+	at com.cloud.api.base.APIBaseService.makeRequest(APIBaseService.java:185)
+	at com.example.service.ApiService.getUsers(ApiService.java:29)
+	at com.example.service.ApiService.getUsers(ApiService.java:24)
+	at com.example.userTest.verifyGetUsers(userTest.java:41)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at org.testng.TestRunner.privateRun(TestRunner.java:739)
+	at org.testng.TestRunner.run(TestRunner.java:614)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+	at org.testng.TestNG.runSuites(TestNG.java:1112)
+	at org.testng.TestNG.run(TestNG.java:1079)
+	at com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:65)
+	at com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:105)
+</textarea>
+          
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+<div class="test-content scrollable">
+<div class="test-content-tools">
+<ul><li><a class="back-to-test" href="#"><i class="fa fa-arrow-left"></i></a></li></ul>
+</div>
+<div class="test-content-detail"><div class="detail-body"></div></div>
+</div></div>
+<div class="test-wrapper row view category-view attributes-view">
+<div class="test-list">
+<div class="test-list-tools">
+<ul class="tools pull-left"><li><a href=""><span class="font-size-14">Category</span></a></li></ul>
+<ul class="tools text-right"><li><a href="#"><span class="badge badge-primary">2</span></a></li></ul>
+</div>
+<div class="test-list-wrapper scrollable">
+<ul class="test-list-item">
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log badge-danger'>1</span>
+</span>
+<p class="name">REGRESSION</p>
+<p class="duration text-sm">1 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>REGRESSION</h4>
+<span status="fail" class='badge log badge-danger'>1 failed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>14:28:02 PM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='1'>verifyGetUsers</a>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log badge-danger'>1</span>
+</span>
+<p class="name">BVT</p>
+<p class="duration text-sm">1 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>BVT</h4>
+<span status="fail" class='badge log badge-danger'>1 failed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>14:28:02 PM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='1'>verifyGetUsers</a>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<div class="test-content scrollable">
+<div class="test-content-detail">
+<div class="detail-body"></div>
+</div>
+</div>
+</div><div class="test-wrapper row view exception-view attributes-view">
+<div class="test-list">
+<div class="test-list-tools">
+<ul class="tools pull-left"><li><a href=""><span class="font-size-14">Exception</span></a></li></ul>
+<ul class="tools text-right"><li><a href="#"><span class="badge badge-primary">1</span></a></li></ul>
+</div>
+<div class="test-list-wrapper scrollable">
+<ul class="test-list-item">
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log badge-danger'>1</span>
+</span>
+<p class="name">java.net.UnknownHostException</p>
+<p class="duration text-sm">1 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>java.net.UnknownHostException</h4>
+<span status="fail" class='badge log badge-danger'>1 failed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>14:28:02 PM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='1'>verifyGetUsers</a>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<div class="test-content scrollable">
+<div class="test-content-detail">
+<div class="detail-body"></div>
+</div>
+</div>
+</div>        </div>
+      </div>
+    </div>
+  </div>
+<script src="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@c05cd28cde1617b9d0c05a831daff6cb97fd9fd5/spark/js/spark-script.js"></script>
+<script type="text/javascript"></script></body>
+</html>

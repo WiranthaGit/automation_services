@@ -1,0 +1,61 @@
+// Generated from YAML specification
+package {{package}};
+
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+import com.fasterxml.jackson.annotation.JsonProperty;
+{{#isResponseDTO}}
+import com.cloud.api.dto.BaseResponseDTO;
+{{/isResponseDTO}}
+{{#imports}}import {{import}};
+{{/imports}}
+
+/**
+ * {{description}}{{^description}}{{classname}}{{/description}}
+ */
+{{#vendorExtensions}}
+{{#isResponseDTO}}
+@Getter
+@Setter
+@NoArgsConstructor
+@AllArgsConstructor
+public class {{classname}} extends BaseResponseDTO {
+{{/isResponseDTO}}
+{{^isResponseDTO}}
+@Getter
+@Setter
+@AllArgsConstructor
+@NoArgsConstructor
+public class {{classname}} {
+{{/isResponseDTO}}
+{{/vendorExtensions}}
+{{^vendorExtensions}}
+{{#classname}}
+{{#isResponseDTO}}
+@Getter
+@Setter
+@NoArgsConstructor
+@AllArgsConstructor
+public class {{classname}} extends BaseResponseDTO {
+{{/isResponseDTO}}
+{{^isResponseDTO}}
+@Getter
+@Setter
+@AllArgsConstructor
+@NoArgsConstructor
+public class {{classname}} {
+{{/isResponseDTO}}
+{{/classname}}
+{{/vendorExtensions}}
+{{#vars}}
+    {{#description}}
+    /**
+     * {{{description}}}
+     */
+    {{/description}}
+    @JsonProperty("{{baseName}}")
+    private {{{datatypeWithEnum}}} {{name}};
+{{/vars}}
+}

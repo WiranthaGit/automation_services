@@ -1,0 +1,16 @@
+// Generated from YAML specification
+package com.example.constants;
+
+/**
+ * Constants for base URL paths
+ */
+public interface BasePathURLs {
+
+{{#servers}}
+    /**
+     * {{description}}
+     */
+    String {{constantName}} = "{{basePath}}";
+{{/servers}}
+
+}

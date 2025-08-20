@@ -1,0 +1,16 @@
+// Generated from YAML specification
+package com.example.constants;
+
+/**
+ * Constants for relative URL paths
+ */
+public interface RelativeURLs {
+
+{{#paths}}
+    /**
+     * {{description}}
+     */
+    String {{constantName}} = "{{path}}";
+{{/paths}}
+
+}

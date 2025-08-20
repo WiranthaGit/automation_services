@@ -1,0 +1,71 @@
+package com.example.service;
+
+import com.fasterxml.jackson.databind.ObjectMapper;
+import com.cloud.api.base.APIBaseService;
+import com.cloud.api.rest.APIRequester;
+import io.restassured.http.Headers;
+import io.restassured.http.Method;
+import io.restassured.response.Response;
+import com.example.dto.RequestDTO.*;
+import com.example.constants.RelativeURLs;
+import com.example.constants.BasePathURLs;
+import java.util.List;
+import java.util.Map;
+
+/**
+ * Service class for {{classname}} operations
+ */
+public class {{classname}}Service extends APIBaseService{
+
+    private ObjectMapper objectMapper = new ObjectMapper();
+    private String baseURI;
+
+    public {{classname}}Service(String baseURI){
+        this.baseURI = baseURI;
+    }
+    
+    {{#operations}}
+    /**
+     * {{summary}}
+     */
+    public Response {{operationId}}({{#hasRequestBody}}{{#isArrayRequestBody}}List<{{requestBodyType}}> body, {{/isArrayRequestBody}}{{^isArrayRequestBody}}{{requestBodyType}} body, {{/isArrayRequestBody}}{{/hasRequestBody}}{{#hasPathParams}}{{#pathParams}}String {{name}}, {{/pathParams}}{{/hasPathParams}}Headers headers, {{#hasQueryParams}}Map<String, Object> queryParams, {{/hasQueryParams}}Class<?> classType) throws Exception {
+        {{#hasRequestBody}}
+        String requestBody = objectMapper.writeValueAsString(body);
+        return {{operationId}}(requestBody, {{#hasPathParams}}{{#pathParams}}{{name}}, {{/pathParams}}{{/hasPathParams}}headers, {{#hasQueryParams}}queryParams, {{/hasQueryParams}}classType, Method.{{httpMethod}});
+        {{/hasRequestBody}}
+        {{^hasRequestBody}}
+        return {{operationId}}({{#hasPathParams}}{{#pathParams}}{{name}}, {{/pathParams}}{{/hasPathParams}}headers, {{#hasQueryParams}}queryParams, {{/hasQueryParams}}classType, Method.{{httpMethod}});
+        {{/hasRequestBody}}
+    }
+
+    {{#hasRequestBody}}
+    public Response {{operationId}}(String body, {{#hasPathParams}}{{#pathParams}}String {{name}}, {{/pathParams}}{{/hasPathParams}}Headers headers, {{#hasQueryParams}}Map<String, Object> queryParams, {{/hasQueryParams}}Class<?> classType, Method method) throws Exception {
+        String path = RelativeURLs.{{pathConstant}};
+        {{#hasPathParams}}
+        {{#pathParams}}
+        path = path.replace("{{replaceName}}", {{name}});
+        {{/pathParams}}
+        {{/hasPathParams}}
+        setRequest(baseURI + BasePathURLs.DEFAULT, path, body, headers);
+        Response response = makeRequest(body, headers, {{#hasQueryParams}}queryParams, {{/hasQueryParams}}method);
+    {{/hasRequestBody}}
+    {{^hasRequestBody}}
+    public Response {{operationId}}({{#hasPathParams}}{{#pathParams}}String {{name}}, {{/pathParams}}{{/hasPathParams}}Headers headers, {{#hasQueryParams}}Map<String, Object> queryParams, {{/hasQueryParams}}Class<?> classType, Method method) throws Exception {
+        String path = RelativeURLs.{{pathConstant}};
+        {{#hasPathParams}}
+        {{#pathParams}}
+        path = path.replace("{{replaceName}}", {{name}});
+        {{/pathParams}}
+        {{/hasPathParams}}
+        setRequest(baseURI + BasePathURLs.DEFAULT, path, headers);
+        Response response = makeRequest(headers, {{#hasQueryParams}}queryParams, {{/hasQueryParams}}method);
+    {{/hasRequestBody}}
+
+        APIRequester.resetBasePath();
+        APIRequester.resetBaseURI();
+
+        return response;
+    }
+    {{/operations}}
+
+}
